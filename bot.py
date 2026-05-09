@@ -11,7 +11,7 @@ DEFAULT_FORMATION = ["ST", "ST", "CAM", "CM", "CM", "CDM", "WB", "WB", "CB", "CB
 
 # Optional: set your server ID here for instant command sync (recommended)
 # Get it by right-clicking your server icon → Copy Server ID (enable Developer Mode first)
-GUILD_ID = None  # e.g. 123456789012345678
+GUILD_ID = 1500296006774947860
 
 POSITION_EMOJIS: dict[str, str] = {
     "ST":  "⚽",
